@@ -18,4 +18,4 @@ class TransformadorInserio:
         elif max_vowel == 'u':
             return 'Tu mayor deseo es la mayor aberracion jamas pensada por un humano,estas tan mal de la cabeza que incluso el diablo duda de que seas una creacion de dios'
         else:
-            return "Tu mayor deseo es cometer un atentado terrorista hacia la universidad de medellin"
+            return "Tu mayor deseo es desaparecer de la existencia"
