@@ -1,3 +1,5 @@
+import re
+
 class TransformadorInserio:
     def transformador_segun_vocales(s):
         print(
@@ -19,3 +21,19 @@ class TransformadorInserio:
             return 'Tu mayor deseo es la mayor aberracion jamas pensada por un humano,estas tan mal de la cabeza que incluso el diablo duda de que seas una creacion de dios'
         else:
             return "Tu mayor deseo es desaparecer de la existencia"
+
+
+class InvertirString:
+    def __init__(self, input_string):
+        self.input_string = input_string
+
+    def invertir(self):
+        return self.input_string[::-1]
+
+
+class RemoverCaracteresEspeciales:
+    def __init__(self, input_string):
+        self.input_string = input_string
+
+    def remove_special_characters(self):
+        return re.sub(r'[^\w\s]', '', self.input_string)
