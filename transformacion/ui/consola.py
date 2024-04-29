@@ -1,5 +1,5 @@
 from transformacion.modelo.abstracciones import Transformador
-from transformacion.modelo.transformaciones import MetodoArroba
+from transformacion.modelo.transformaciones import MetodoArroba, MetodoT
 
 
 def main():
@@ -38,7 +38,7 @@ def obtener_metodo_transformacion(metodo: int) -> Transformador:
         return MetodoArroba()
 
     if metodo == 2:
-        pass
+        return MetodoT()
 
     if metodo == 3:
         pass
