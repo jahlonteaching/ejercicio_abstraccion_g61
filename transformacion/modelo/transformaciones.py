@@ -1,5 +1,7 @@
 import re
 
+from transformacion.modelo.abstracciones import Transformador
+
 
 class MetodoArroba(Transformador):
 
