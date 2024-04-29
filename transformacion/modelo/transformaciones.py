@@ -4,7 +4,6 @@ from transformacion.modelo.abstracciones import Transformador
 
 
 class MetodoArroba(Transformador):
-
     def transformar(self, texto: str, tipo: int) -> str:
         if tipo == 1:
             trans = InvertirString()
@@ -15,7 +14,6 @@ class MetodoArroba(Transformador):
             trans = RemoverCaracteresEspeciales(texto)
             trans.remove_special_characters()
             return trans.data
-
 
 
 class InvertirString:
