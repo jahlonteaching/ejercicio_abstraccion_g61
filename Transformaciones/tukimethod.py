@@ -19,3 +19,6 @@ class Tuki:
             return self.text_upper(string)
         elif type == 3:
             return self.text_lower(string)
+
+
+#Complete
