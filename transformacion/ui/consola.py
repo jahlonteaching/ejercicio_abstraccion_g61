@@ -1,3 +1,7 @@
+from transformacion.modelo.abstracciones import Transformador
+from transformacion.modelo.transformaciones import MetodoArroba
+
+
 def main():
     print("Bienvenido al programa de transformaciones.")
     print("Por favor, elige un método de transformación:")
@@ -29,9 +33,9 @@ def tipos_de_transformacion():
     return tipo_elegido
 
 
-def obtener_metodo_transformacion(metodo: int) -> Transformador
+def obtener_metodo_transformacion(metodo: int) -> Transformador:
     if metodo == 1:
-        pass
+        return MetodoArroba()
 
     if metodo == 2:
         pass
