@@ -1,6 +1,6 @@
 class MetodoT(Transformador):
 
-    def transformar(self, string:str, tipo: int):
+    def transformar(self, string:str, tipo: int) -> str:
         if tipo == 1:
             return self.fillspaces(string)
         elif tipo == 2:
