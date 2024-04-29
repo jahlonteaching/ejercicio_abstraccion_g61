@@ -61,11 +61,11 @@ class MetodoT(Transformador):
         elif tipo == 3:
             return self.hyphentospaces(string)
 
-def fillspaces(string: str):
-    return string.replace(" ", "-")
+    def fillspaces(self, string: str):
+        return string.replace(" ", "-")
 
-def mayus(string: str):
-    return string.upper()
+    def mayus(self, string: str):
+        return string.upper()
 
-def hyphentospaces(string: str):
-    return string.replace("-", " ")
+    def hyphentospaces(self, string: str):
+        return string.replace("-", " ")
