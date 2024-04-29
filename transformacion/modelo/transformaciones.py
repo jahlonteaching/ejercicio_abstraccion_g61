@@ -1,5 +1,21 @@
 import re
 
+
+class MetodoArroba(Transformador):
+
+    def transformar(self, texto: str, tipo: int) -> str:
+        if tipo == 1:
+            trans = InvertirString()
+            return trans.invertir_cadena(texto)
+        if tipo == 2:
+            raise NotImplementedError
+        if tipo == 3:
+            trans = RemoverCaracteresEspeciales(texto)
+            trans.remove_special_characters()
+            return trans.data
+
+
+
 class InvertirString:
     def invertir_cadena(self, cadena: str) -> str:
 
