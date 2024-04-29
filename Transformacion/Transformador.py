@@ -1,39 +1,33 @@
 import re
 
-class TransformadorInserio:
-    def transformador_segun_vocales(s):
-        print(
-            "Este transformador retorna tu mayor deseo segun un intenso analisis psicologico atraves de la aleatoridad de tu texto")
-        vowels = {'a': 0, 'e': 0, 'i': 0, 'o': 0, 'u': 0}
-        for char in s:
-            if char in vowels:
-                vowels[char] += 1
-        max_vowel = max(vowels, key=vowels.get)
-        if max_vowel == 'a':
-            return 'tu mayor deseo es que el cancer sea contagioso'
-        elif max_vowel == 'e':
-            return 'tu mayor deseo es ser invisible'
-        elif max_vowel == 'i':
-            return 'tu mayor deseo es poder teleportarte'
-        elif max_vowel == 'o':
-            return 'tu mayor deseo es cometer crimenes de odio en israel'
-        elif max_vowel == 'u':
-            return 'Tu mayor deseo es la mayor aberracion jamas pensada por un humano,estas tan mal de la cabeza que incluso el diablo duda de que seas una creacion de dios'
-        else:
-            return "Tu mayor deseo es desaparecer de la existencia"
-
-
 class InvertirString:
-    def __init__(self, input_string):
-        self.input_string = input_string
+    def invertir_cadena(self, cadena: str) -> str:
 
-    def invertir(self):
-        return self.input_string[::-1]
+        cadena_invertida = ""
+        for caracter in reversed(cadena):
+            cadena_invertida += caracter
+        return cadena_invertida
+
+    def invertir_numero(self, numero: int) -> int:
+
+        if numero == 0:
+            return 0
+        else:
+            digitos = str(numero)
+            digitos_invertidos = digitos[::-1]
+            numero_invertido = int(digitos_invertidos)
+            return numero_invertido
 
 
 class RemoverCaracteresEspeciales:
-    def __init__(self, input_string):
-        self.input_string = input_string
+    def __init__(self, data):
+        self.data = data
 
     def remove_special_characters(self):
-        return re.sub(r'[^\w\s]', '', self.input_string)
+        if isinstance(self.data, str):
+            self.data = re.sub(r'[^a-zA-Z0-9\s]', '', self.data)
+        elif isinstance(self.data, int):
+            self.data = str(self.data)
+            self.data = re.sub(r'[^0-9]', '', self.data)
+        else:
+            raise TypeError("Solo se admiten strings o enteros")
